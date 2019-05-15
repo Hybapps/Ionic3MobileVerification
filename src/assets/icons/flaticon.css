@@ -1,0 +1,40 @@
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+  font-size:1.8px;
+  font-style: normal;
+}
+
+.flaticon-chef:before { content: "\f100"; }
+.flaticon-time:before { content: "\f101"; }
+.flaticon-box:before { content: "\f102"; }
+.flaticon-van:before { content: "\f103"; }
+.flaticon-road:before { content: "\f104"; }
+.flaticon-map:before { content: "\f105"; }
+.flaticon-list:before { content: "\f106"; }
+.flaticon-table:before { content: "\f107"; }
+.flaticon-door:before { content: "\f108"; }
+.flaticon-food:before { content: "\f109"; }
+.flaticon-food-1:before { content: "\f10a"; }
+.flaticon-dinner:before { content: "\f10b"; }
+.flaticon-calendar:before { content: "\f10c"; }
+.flaticon-road-1:before { content: "\f10d"; }
+.flaticon-cook:before { content: "\f10e"; }
+.flaticon-star:before { content: "\f10f"; }
+.flaticon-order:before { content: "\f110"; }
+.flaticon-shopping-bag:before { content: "\f111"; }
+.flaticon-gear2:before { content: "\f112"; }
+.flaticon-home:before { content: "\f113"; }
+.flaticon-list-1:before { content: "\f114"; }
+.flaticon-mark:before { content: "\f115"; }
+.flaticon-chat:before { content: "\f116"; }
+.flaticon-share:before { content: "\f117"; }

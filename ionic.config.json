@@ -1,5 +1,7 @@
 {
   "name": "mobileVeify",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }

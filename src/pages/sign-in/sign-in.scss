@@ -1,0 +1,104 @@
+page-sign-in {
+    .sign_form{
+        margin-top:40px;
+    }
+}
+.sign{
+    .scroll-content{
+        padding:$content-padding*2;
+        .welcome_div{
+            padding:$content-padding*2;
+            h1{
+                margin:0px;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                font-size:2.5rem;
+                font-weight:500;
+            }
+            p{
+                margin:10px 0px 0px;
+                font-size:1.8rem;
+                letter-spacing: .06rem;
+            }
+        }
+        .or{
+            font-size:$h5_font_size;
+            font-weight: bold;
+            text-align: center;
+            position: relative;
+            margin:20px 0px;
+            &:after,&:before{
+                content:'';
+                width: calc(50% - 20px);
+                position: absolute;
+                margin:auto 0px;
+                height:1px;
+                background:color($colors,secondary);
+            }
+            &:after{
+                @include position(0px,0px,0px,auto);
+            }
+            &:before{
+                @include position(0px,auto,0px,0px);
+            }
+        }
+        .social_btns{
+            padding:$content-padding*2;
+            .button{
+                margin-bottom:$content-padding*2;
+                .icon{
+                    font-size:2rem;
+                    padding:0px;
+                    @include margin(0px,10px,0px,0px);
+                }
+                &:last-child{
+                    margin-bottom:0px;
+                }
+            }
+        }
+    }
+}
+.sign_form{
+    .item{
+        height:$control-height;
+        background: color($colors,backGray);
+        border-radius:$control-height/2;
+        border:1px solid color($colors,gray);
+        padding:0px $content-padding;
+        margin-bottom:$content-padding*2;
+        &:last-child{
+            margin-bottom:0px;
+        }
+        .input{
+            @include placeholder{
+                color:color($colors,secondary);
+            }
+            .text-input{
+                font-size:$h4_font_size;
+                text-align: center;
+            }
+        }
+        &.item-select {
+            .select{
+                width:100%;
+                max-width:100%;
+                .select-text{
+                    text-align: center;
+                }
+                .select-icon{
+                    width:20px;
+                }
+            }
+        }
+        &.item-checkbox{
+            height: auto;
+            border:none;
+            background:none;
+            border-radius:0px;
+        }
+    }
+    .button{
+        margin-top:20px;
+    }
+}

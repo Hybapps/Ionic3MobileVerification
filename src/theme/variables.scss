@@ -9,66 +9,65 @@ $font-path: "../assets/fonts";
 // The app direction is used to include
 // rtl styles in your app. For more info, please see:
 // http://ionicframework.com/docs/theming/rtl-support/
-$app-direction: ltr;
+$app-direction: multi;
 
 
 @import "ionic.globals";
 
 
-// Shared Variables
-// --------------------------------------------------
-// To customize the look and feel of this app, you can override
-// the Sass variables found in Ionic's source scss files.
-// To view all the possible Ionic variables, see:
-// http://ionicframework.com/docs/theming/overriding-ionic-variables/
-
-
-
-
-// Named Color Variables
-// --------------------------------------------------
-// Named colors makes it easy to reuse colors on various components.
-// It's highly recommended to change the default colors
-// to match your app's branding. Ionic uses a Sass map of
-// colors so you can add, rename and remove colors as needed.
-// The "primary" color is the only required color in the map.
-
 $colors: (
-  primary:    #488aff,
-  secondary:  #32db64,
-  danger:     #f53d3d,
-  light:      #f4f4f4,
-  dark:       #222
+  primary:    #de8300,
+  secondary:  #383737,
+  danger:     #990000,
+  success:    #50b848,
+  offline:    #ff1213,
+  skyBlue:    #00a2e7,
+  light:      #fff,
+  dark:       #000,
+  gray:       #858585,
+  backGray:   #f3f3f3,
+  facebook:   #58689d,
+  instagram:  #e6516d
 );
 
 
-// App iOS Variables
-// --------------------------------------------------
-// iOS only Sass variables can go here
+$content-padding:8px;
+$content-margin:$content-padding;
+$control-height:50px;    
+$control-radius:8px;
+$grid-padding-width:$content-padding ;
+$toolbar-ios-height:56px;
+$button_in_header_size:50px;
+// sidemenu  
+$menu-width:300px;
+$menu-small-width:$menu-width;
+// fonts  Variables 
+$h4_font_size:1.4rem;
+$h5_font_size:1.3rem;
+$p_font_size:1.2rem;  
+$h4_font_weight:bold;  
+$h5_font_weight:500;
+$p_font_weight:400;  
 
 
+@font-face {
+  font-family: arFont;
+  src: url($font-path + '/GE_SS_Text_Light.otf');
+  font-weight:400;
+}
 
-
-// App Material Design Variables
-// --------------------------------------------------
-// Material Design only Sass variables can go here
-
-
-
-
-// App Windows Variables
-// --------------------------------------------------
-// Windows only Sass variables can go here
-
-
-
-
-// App Theme
-// --------------------------------------------------
-// Ionic apps can have different themes applied, which can
-// then be future customized. This import comes last
-// so that the above variables are used and Ionic's
-// default are overridden.
+@font-face {
+  font-family: arFont;
+  src: url($font-path + '/GE_SS_Two_Medium.otf');
+  font-weight:500;
+}
+ion-app{
+  @include rtl(){
+    font-family:arFont , sans-serif !important; 
+    font-weight:400;
+  }
+ 
+}
 
 @import "ionic.theme.default";
 

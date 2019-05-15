@@ -1,0 +1,26 @@
+page-thanks {
+    .scroll-content{
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        img{
+            width:160px;
+            height:160px;
+            object-fit: contain;
+            margin-top:-75px;
+        }
+        h4{
+            font-size:1.7rem!important;
+            font-weight: bold;
+            margin:10px 0px ;
+        }
+        p{
+            margin:0px;
+            font-size:1.4rem!important;
+            font-weight: 500!important;
+        }
+    }
+}

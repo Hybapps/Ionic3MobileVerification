@@ -1,30 +1,49 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
+import { ErrorHandler, NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-import { SplashScreen } from '@ionic-native/splash-screen';
+
+import { MyApp } from './app.component'; 
+
 import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
+import { GlobalProvider } from '../providers/global/global'; 
+import { FirebaseAuthentication } from '@ionic-native/firebase-authentication';
 
-import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
 
+var config = {
+  backButtonText: '',  
+  backButtonIcon: 'md-arrow-back',
+  iconMode: 'ios',
+  mode:'ios',
+  modalEnter: 'modal-ios-slide-in',
+  modalLeave: 'modal-ios-slide-out',
+  pageTransition: 'ios',
+  scrollPadding: false,  
+  scrollAssist: true, 
+  autoFocusAssist: false,    
+};
 @NgModule({
-  declarations: [
-    MyApp,
-    HomePage
+  declarations: [  
+    MyApp
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp,config), 
   ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
-  ]
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    GlobalProvider, 
+    FirebaseAuthentication
+
+  ] 
 })
 export class AppModule {}

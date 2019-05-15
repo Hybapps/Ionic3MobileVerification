@@ -1,0 +1,14 @@
+
+<ion-content  >
+  <ion-list>
+    <ion-list-header>
+      <ion-searchbar></ion-searchbar>
+    </ion-list-header>
+    <ion-item *ngFor="let item of global.countries" (click)="close(item)">
+      <img src="{{item.flag}}" item-left/>
+      <p class="country_name" ion-text color="secondary">{{item.name_en}}</p>
+      <p class="code" ion-text color="gray">( {{item.code}} )</p>
+    </ion-item>
+  </ion-list>
+</ion-content>
+ 

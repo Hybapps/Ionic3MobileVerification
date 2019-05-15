@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+Code sent to :      <p ion-text color="gray">{{mobileNumber}}</p>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <p ion-text color="dark" text-center>
+Please enter the code you received to activate your number  
+</p>
+  <p ion-text color="dark" text-center>
+  </p>
+
+  <ion-list class="activation_code">
+
+    <ion-item >
+      <ion-input #codesInpunt0 (keyup)="changeFocus(1)"  [(ngModel)]="code[0]" type="tel" maxlength="1"  ></ion-input>
+    </ion-item>
+    <ion-item >
+      <ion-input #codesInpunt1 (keyup)="changeFocus(2)" [(ngModel)]="code[1]" type="tel" maxlength="1"  ></ion-input>
+    </ion-item>
+    <ion-item >
+      <ion-input #codesInpunt2 (keyup)="changeFocus(3)" [(ngModel)]="code[2]" type="tel" maxlength="1"  ></ion-input>
+    </ion-item>
+    <ion-item >
+      <ion-input #codesInpunt3 (keyup)="changeFocus(4)" [(ngModel)]="code[3]" type="tel" maxlength="1"  ></ion-input>
+    </ion-item>
+    <ion-item >
+      <ion-input #codesInpunt4 (keyup)="changeFocus(5)" [(ngModel)]="code[4]" type="tel" maxlength="1"  ></ion-input>
+    </ion-item>
+    <ion-item >
+      <ion-input #codesInpunt5  [(ngModel)]="code[5]" type="tel" maxlength="1"  ></ion-input>
+    </ion-item>
+
+  </ion-list>
+  <button ion-button block color="secondary" round (click)="activate()">Activate</button>
+</ion-content>
+<ion-footer>
+  <ion-grid no-padding>
+    <ion-row>
+      <ion-col col-6>
+        <button ion-button clear color="gray">00:19</button>
+      </ion-col>
+      <ion-col col-6>
+        <button ion-button clear color="gray">00:19</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>
